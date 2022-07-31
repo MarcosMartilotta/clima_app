@@ -1,0 +1,23 @@
+{
+  "name": "clima_app",
+  "version": "1.0.0",
+  "description": "App del clima ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MarcosMartilotta/clima_app.git"
+  },
+  "keywords": [
+    "clima",
+    "OpenWeather"
+  ],
+  "author": "Marcos Martilotta <marcos.martilotta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarcosMartilotta/clima_app/issues"
+  },
+  "homepage": "https://github.com/MarcosMartilotta/clima_app#readme"
+}
