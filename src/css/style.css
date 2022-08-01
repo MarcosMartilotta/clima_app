@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary: #3949ab;
+    --P-light: #6f74dd;
+    --P-dark: #00227b;
+    --secondary: #37474f;
+    --S-light: #62727b;
+    --S-dark: #102027; 
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 40px 3fr 1fr;
+    gap: 20px;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif; 
+    color: white;
+    background: rgb(111,116,221);
+    background: radial-gradient(circle, rgba(111,116,221,1) 35%, rgba(0,34,123,1) 100%);
+    background-repeat: no-repeat;
+    
+}
+
+header {
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+header p span{
+    position: relative;
+}
+
+header p img {
+    position: absolute;
+    top: -5px;
+    width: 20px;
+}
+header .header__city {
+    display: flex;
+    justify-content: space-between;
+}
+header .header__city input {
+    width: 100px;
+}
+
+header .header__city img {
+    width: 20px;
+}
+
+.principalParams{
+    display: grid;
+    grid-template-rows: 30px 2fr 1fr 1fr;
+    place-items: center;
+}
+
+.principalParams .city{
+    font-size: 1.8rem;
+    justify-self: left; 
+}
+
+.principalParams img {
+    width: 150px;
+}
+
+.principalParams .description{
+    font-size: 1.2rem;
+}
+
+.principalParams .temp{
+    font-size: 3.4rem;
+    font-weight: 900;
+}
+
+.secondaryParams {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 20px 0px;
+}
+
+.secondaryParams img {
+    width: 30px;
+}
+
+.secondaryParams div {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+
+
+
+
