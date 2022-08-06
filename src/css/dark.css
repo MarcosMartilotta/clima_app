@@ -1,0 +1,7 @@
+.label.active{
+    background-color: #102027;
+}
+
+body.dark {
+    background: radial-gradient(circle, rgb(16, 19, 77) 35%, rgb(1, 2, 7) 100%);
+}
