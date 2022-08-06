@@ -18,11 +18,16 @@ const openWeatherCall = async (URL_API) => {
 //tomo el input de la ciudad
 const getCity = () => {
     const city = document.querySelector('#city').value;
-    document.querySelector('.principaParams__city').innerHTML = city; 
     const URL_API = `http://api.openweathermap.org/data/2.5/weather?q=${city}&limit=5&appid=${API_KEY}&units=metric`;
     document.querySelector('#city').value = '';
     openWeatherCall(URL_API).then(data =>{
         /* debugger; */
+        if (data.name){
+            document.querySelector('.principaParams__city').innerHTML = data.name; 
+
+        } else {
+            document.querySelector('.principaParams__city').innerHTML = 'Ciudad inexistente';
+        }
         document.querySelector('#description').innerHTML = data.weather[0].description;  
         document.querySelector('#temperature').innerHTML = `${Math.floor(data.main.temp)}°`;
         document.querySelector('#wind').innerHTML = `${data.wind.speed}k/h`;
