@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary: #3949ab;
+    --P-light: #6f74dd;
+    --P-dark: #00227b;
+    --secondary: #37474f;
+    --S-light: #62727b9f;
+    --S-dark: #102027a9; 
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 10vh 70vh 20vh; 
+    gap: 20px; 
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif; 
+    color: white;
+    background: rgb(111,116,221);
+    background: radial-gradient(circle, rgba(111,116,221,1) 35%, rgba(0,34,123,1) 100%);
+    background-repeat: no-repeat;
+    
+}
+
+header {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+header p {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+/* header p span{
+    position: relative;
+}
+
+header p img {
+    position: absolute;
+    top: -5px;
+    width: 20px;
+} */
+header .header__city {
+    position: relative;
+    width: 150px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: #00237b5e;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    transition: box-shadow 0.3s cubic-bezier(.1,.98,.19,1.32);
+    -webkit-transition: box-shadow 0.3s cubic-bezier(.1,.98,.19,1.32);
+    -moz-transition: box-shadow 0.3s cubic-bezier(.1,.98,.19,1.32);
+    -ms-transition: box-shadow 0.3s cubic-bezier(.1,.98,.19,1.32);
+    -o-transition: box-shadow 0.3s cubic-bezier(.1,.98,.19,1.32);
+}
+
+
+
+header .header__city input {
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+header .header__city input:focus {
+    outline: none;
+}
+
+header .header__city input::placeholder {
+    color: #6f74ddc7;
+}
+header .header__city input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+header .header__city img {
+    width: 20px;
+}
+
+header .header__city:hover {
+    box-shadow: 2px 0px 15px rgba(0,0,0,0.3);
+
+}
+#search {
+    cursor: pointer;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: var(--P-dark);
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 20px;
+	width: 40px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: var(--secondary);
+	border-radius: 50%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 20px;
+	width: 20px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(20px);
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	-ms-transform: translateX(20px);
+	-o-transform: translateX(20px);
+}
+
+.moon {
+    position: absolute;
+    right: 0px;
+	width: 20px;
+}
+
+.sun {
+    position: absolute;
+    left: 0px;
+    width: 20px;
+}
+
+.sun {
+	color: #f39c12;
+}
+
+
+main {
+    height: fit-content;
+    margin: 20px 0px 20px 0px;
+    display: grid;
+    grid-auto-rows: max-content;
+}
+
+.principalParams{
+    display: grid;
+    grid-template-rows: 50px 2fr 1fr 1fr;
+    gap: 20px;
+    place-items: center;
+}
+
+.principalParams .principaParams__city{
+    margin: 20px;
+    font-size: 1.8rem;
+    justify-self: left; 
+}
+
+.principalParams img {
+    width: 150px;
+}
+
+.principalParams .description{
+    font-size: 1.2rem;
+}
+
+.principalParams .temp{
+    font-size: 3.4rem;
+    font-weight: 900;
+}
+
+.secondaryParams {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 45px 0px;
+}
+
+.secondaryParams img {
+    width: 30px;
+}
+
+.secondaryParams div {
+    width: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    border-radius: 10px;
+    background-color: #00237b5e;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: box-shadow 0.3s cubic-bezier(.1,.98,.19,1.32);
+}
+
+.secondaryParams div:hover {
+    box-shadow: 2px 0px 15px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+
