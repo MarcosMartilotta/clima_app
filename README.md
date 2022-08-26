@@ -4,7 +4,7 @@
 
 - Será utilizado únicamente JS CSS y HTML.
 
-- Esta primera version es unicamente para mobile. 
+- Esta primera version está pensada únicamente para mobile. 
 
 ## Mejoras
 

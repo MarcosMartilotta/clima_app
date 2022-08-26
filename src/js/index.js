@@ -28,7 +28,7 @@ const getCity = () => {
         } else {
             document.querySelector('.principaParams__city').innerHTML = 'Ciudad inexistente';
         }
-        document.querySelector('#description').innerHTML = data.weather[0].description;  
+        document.querySelector('#description').innerHTML = data.weather[0].description[0].toUpperCase() + data.weather[0].description.substring(1);  
         document.querySelector('#temperature').innerHTML = `${Math.floor(data.main.temp)}°`;
         document.querySelector('#wind').innerHTML = `${data.wind.speed}k/h`;
         document.querySelector('#humidity').innerHTML = `${data.main.humidity}%`;
@@ -42,12 +42,13 @@ const getCity = () => {
      openWeatherCall(URL_API).then(data =>{
 
         document.querySelector('.principaParams__city').innerHTML = data.name;  
-        document.querySelector('#description').innerHTML = data.weather[0].description;  
+        document.querySelector('#description').innerHTML = data.weather[0].description[0].toUpperCase() + data.weather[0].description.substring(1);  
         document.querySelector('#temperature').innerHTML = `${Math.floor(data.main.temp)}°`;
         document.querySelector('#wind').innerHTML = `${data.wind.speed}k/h`;
         document.querySelector('#humidity').innerHTML = `${data.main.humidity}%`;
         document.querySelector('#visibility').innerHTML = `${data.visibility}m`;
         document.querySelector('#weatherIcon').src = `../../public/assets/icons/description_icons/${data.weather[0].icon}.png`
+        console.log(document.querySelector('#weatherIcon').src);
     });
 } 
 
@@ -69,7 +70,8 @@ window.onload = () => {
         document.querySelector('#wind').innerHTML = `20k/h`;
         document.querySelector('#humidity').innerHTML = `45%`;
         document.querySelector('#visibility').innerHTML = `10000m`;
-        document.querySelector('#weatherIcon').src = `../../public/assets/icons/description_icons/01d.png`
+        document.querySelector('#weatherIcon').src = `../../public/assets/icons/description_icons/01d.png`;
+        console.log(document.querySelector('#weatherIcon').src);
     } 
 
     document.querySelector('#search').addEventListener('click', getCity);
