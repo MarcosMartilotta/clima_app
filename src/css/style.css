@@ -216,10 +216,10 @@ main {
     transition: box-shadow 0.3s cubic-bezier(.1,.98,.19,1.32);
 }
 
-.secondaryParams div:hover {
+/* .secondaryParams div:hover {
     box-shadow: 2px 0px 15px rgba(0,0,0,0.3);
 }
-
+ */
 
 
 
